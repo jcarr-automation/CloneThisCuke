@@ -1,6 +1,6 @@
 # CloneThisCuke
 
-General-Purpose Gherkin project that was created using Java 13, leveraging the common "Cucumber" and "RestAssured" test frameworks.
+General-Purpose **Gherkin** project that was created using **Java 13**, leveraging the common **Cucumber** and **RestAssured** test frameworks.
  
 This project is meant to be a "jumpstart" BDD/ATDD project for any test automation engagements that would need scripts for:
 - Web Browser
@@ -10,7 +10,7 @@ This project is meant to be a "jumpstart" BDD/ATDD project for any test automati
 
 There are drivers in the project that enable each of the above interfaces to be tested.
 
-Drivers yet to be implemented or tested:
+*Drivers yet to be implemented or tested:*
 - Web Browser (SauceLabs)
 - Native Mac
 - Native Mobile

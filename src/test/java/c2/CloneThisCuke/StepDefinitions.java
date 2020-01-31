@@ -13,6 +13,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class StepDefinitions {
 	
@@ -29,11 +31,17 @@ public class StepDefinitions {
 	@Given("navigate to cucumber home page")
 	public void navigate_to_cucumber_home_page() {
 		
-		System.setProperty(
-				"webdriver.chrome.driver", 
-				"resources\\drivers\\chromedriver.exe");
+//		System.setProperty(
+//				"webdriver.chrome.driver", 
+//				"resources\\drivers\\chromedriver.exe");
+//	    driver = new ChromeDriver();
 		
-	    driver = new ChromeDriver();
+		System.setProperty(
+			"webdriver.gecko.driver", 
+			"resources\\drivers\\geckodriver.exe");
+		FirefoxOptions options = new FirefoxOptions();
+        FirefoxDriver driver = new FirefoxDriver(options);
+	    
 	    setDriver(driver);
 	    driver.get("https://cucumber.io/");
 	}

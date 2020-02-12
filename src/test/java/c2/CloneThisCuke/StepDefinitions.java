@@ -31,16 +31,16 @@ public class StepDefinitions {
 	@Given("navigate to cucumber home page")
 	public void navigate_to_cucumber_home_page() {
 		
-//		System.setProperty(
-//				"webdriver.chrome.driver", 
-//				"resources\\drivers\\chromedriver.exe");
-//	    driver = new ChromeDriver();
-		
 		System.setProperty(
-			"webdriver.gecko.driver", 
-			"resources\\drivers\\geckodriver.exe");
-		FirefoxOptions options = new FirefoxOptions();
-        FirefoxDriver driver = new FirefoxDriver(options);
+				"webdriver.chrome.driver", 
+				"resources\\drivers\\chromedriver.exe");
+	    driver = new ChromeDriver();
+		
+//		System.setProperty(
+//			"webdriver.gecko.driver", 
+//			"resources\\drivers\\geckodriver.exe");
+//		FirefoxOptions options = new FirefoxOptions();
+//        FirefoxDriver driver = new FirefoxDriver(options);
 	    
 	    setDriver(driver);
 	    driver.get("https://cucumber.io/");

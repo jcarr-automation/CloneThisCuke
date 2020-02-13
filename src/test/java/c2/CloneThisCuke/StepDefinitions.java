@@ -1,5 +1,6 @@
 package c2.CloneThisCuke;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,6 +14,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -31,11 +34,21 @@ public class StepDefinitions {
 	@Given("navigate to cucumber home page")
 	public void navigate_to_cucumber_home_page() {
 		
+		// Chrome startup
+//	    ChromeOptions options = new ChromeOptions();
+//	    options.addArguments("start-maximized");
+//		System.setProperty(
+//				"webdriver.chrome.driver", 
+//				"resources\\drivers\\chromedriver.exe");
+//	    driver = new ChromeDriver(options);
+	    
+		// Edge startup
 		System.setProperty(
-				"webdriver.chrome.driver", 
-				"resources\\drivers\\chromedriver.exe");
-	    driver = new ChromeDriver();
+				"webdriver.edge.driver", 
+				"resources\\drivers\\msedgedriver.exe");
+	    driver = new EdgeDriver();
 		
+	    // Firefox startup
 //		System.setProperty(
 //			"webdriver.gecko.driver", 
 //			"resources\\drivers\\geckodriver.exe");
@@ -59,4 +72,11 @@ public class StepDefinitions {
 				"Unable to locate the header text on the page!",
 				!textList.isEmpty());
 	}
+	
+	@After
+    public void teardown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

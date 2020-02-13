@@ -18,35 +18,29 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class StepDefinitions {
 	
+	@Autowired
 	WebDriver driver;
-	
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
 
 	@Given("navigate to cucumber home page")
 	public void navigate_to_cucumber_home_page() {
 		
 		// Chrome startup
-//	    ChromeOptions options = new ChromeOptions();
-//	    options.addArguments("start-maximized");
-//		System.setProperty(
-//				"webdriver.chrome.driver", 
-//				"resources\\drivers\\chromedriver.exe");
-//	    driver = new ChromeDriver(options);
+	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("start-maximized");
+		System.setProperty(
+				"webdriver.chrome.driver", 
+				"resources\\drivers\\chromedriver.exe");
+	    driver = new ChromeDriver(options);
 	    
 		// Edge startup
-		System.setProperty(
-				"webdriver.edge.driver", 
-				"resources\\drivers\\msedgedriver.exe");
-	    driver = new EdgeDriver();
+//		System.setProperty(
+//				"webdriver.edge.driver", 
+//				"resources\\drivers\\msedgedriver.exe");
+//	    driver = new EdgeDriver();
 		
 	    // Firefox startup
 //		System.setProperty(
@@ -55,7 +49,6 @@ public class StepDefinitions {
 //		FirefoxOptions options = new FirefoxOptions();
 //        FirefoxDriver driver = new FirefoxDriver(options);
 	    
-	    setDriver(driver);
 	    driver.get("https://cucumber.io/");
 	}
 	

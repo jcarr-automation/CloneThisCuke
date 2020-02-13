@@ -12,6 +12,7 @@
 	<properties>
 		<cucumber.version>5.0.0</cucumber.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<spring.version>5.2.3.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
@@ -43,13 +44,38 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
 		
+		
+      	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-context</artifactId>
+        	<version>${spring.version}</version>
+      	</dependency>
+      	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-context-support</artifactId>
+        	<version>${spring.version}</version>
+      	</dependency>
+      	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-beans</artifactId>
+        	<version>${spring.version}</version>
+      	</dependency>
+      	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-core</artifactId>
+        	<version>${spring.version}</version>
+      	</dependency>
+      	<dependency>
+        	<groupId>org.springframework</groupId>
+        	<artifactId>spring-expression</artifactId>
+        	<version>${spring.version}</version>
+      	</dependency>
 
 	</dependencies>
 

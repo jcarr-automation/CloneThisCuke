@@ -4,13 +4,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-@Configuration
-@PropertySource("classpath:framework.properties")
 public class HookDefinitions {
 	
 	@Autowired

@@ -3,18 +3,18 @@
 General-Purpose **Maven** project that was created using **Java 13**, leveraging the common **Cucumber**, **Selenium Webdriver** and **RestAssured** test frameworks.
  
 This project is meant to be a "jumpstart" BDD/ATDD project for any test automation engagements that would need scripts for:
-- Web Browser (Windows 10)
+- Web Browser
 - REST API
-- Native Windows
-- SQL (MySQL, MSSQL)
+- Native Windows, Mac
+- SQL
 
 There are drivers in the project that enable each of the above interfaces to be tested.
 
 *Drivers yet to be implemented or tested:*
-- Web Browser (Mac OS X, SauceLabs)
-- Native Mac
+- Web Browser (Mac OS X, Linux, SauceLabs)
+- Native Windows, Mac
 - Native Mobile
-- SQL (Oracle, Sybase, DB2)
+- SQL (MySQL, MSSQL, Oracle, Sybase, DB2)
 
 ## Installation
 
@@ -22,7 +22,7 @@ There are a couple options...
 
 ### Using IDE directly to import from GitHub
 
-This is the way.
+_This is the way._
 
 I'm assuming a lot here, mostly that you have your favorite code editor set up, and it has a functioning integration with GitHub (maybe via git plugins).
 I'm also assuming you have a web browser open to GitHub, specifically this repo: https://github.com/jcarr-automation/CloneThisCuke

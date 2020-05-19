@@ -1,4 +1,4 @@
-package c2.CloneThisCuke;
+package jcarr.CloneThisCuke;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

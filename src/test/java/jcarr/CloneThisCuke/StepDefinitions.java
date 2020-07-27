@@ -47,6 +47,15 @@ public class StepDefinitions {
 			FirefoxDriver ff_driver = new FirefoxDriver(options);
 			driver = ff_driver;
 		}
+
+		if(HookDefinitions.browser.equals("mac_chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("start-maximized");
+			System.setProperty(
+					"webdriver.chrome.driver",
+					"resources/drivers/chromedriver");
+			driver = new ChromeDriver(options);
+		}
 		
 		return driver;
 	}
